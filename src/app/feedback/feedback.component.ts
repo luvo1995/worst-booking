@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./feedback.component.scss']
 })
 export class FeedbackComponent implements OnInit {
-
+  
   constructor(private Feedback: Router) { }
 
   submit(){
