@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { BookedComponent } from './booked/booked.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     FeedbackComponent,
     MenuComponent,
-    RoomsComponent
+    RoomsComponent,
+    BookedComponent
   ],
   imports: [
     BrowserModule,

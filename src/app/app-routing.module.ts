@@ -6,14 +6,16 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { RoomsComponent } from './rooms/rooms.component';
+import { BookedComponent } from './booked/booked.component';
 
 const routes: Routes = [{path: "", component:MenuComponent, children:[
 {path: "", component:HomeComponent},  
   {path: "about", component:AboutComponent}, 
   {path: "contact", component:ContactComponent},
   {path: "feedback", component:FeedbackComponent},
-  {path: "rooms", component:RoomsComponent}
-]}]
+  {path: "rooms", component:RoomsComponent},
+]} ,{path: "booked", component:BookedComponent}]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   // submit(){
 
-  //   this.Home.navigateByUrl("Home");
+  //   this.Home.navigateByUrl("home");
   // }
   ngOnInit() {
   }

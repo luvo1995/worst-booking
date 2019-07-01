@@ -13,7 +13,7 @@
 
 <!-- Navigation Bar -->
 
-<div class="w3-bar w3-white w3-large">
+<div class="w3-bar w3-white w3-large" class="fixed">
   <a class="active" href="" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i>West Hotel</a>
   <a href="" class="w3-bar-item w3-button w3-mobile">Home</a>
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
@@ -41,12 +41,10 @@
 <div class="search-area-box-2 search-area-box-6">
     <div class="container">
         <div class="search-contents">
-            <form method="GET">
+   
                 <div class="row search-your-details">
                     <div class="col-lg-3 col-md-3">
                         <div class="search-your-rooms mt-20">
-                            <h3 class="hidden-xs hidden-sm">Select</h3>
-                            <h2 class="hidden-xs hidden-sm">Your <span>Rooms</span></h2>
                             <h2 class="hidden-lg hidden-md">Select Your <span>Rooms</span></h2>
                         </div>
                     </div>
@@ -64,17 +62,17 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="room" >
+                                    <select class="selectpicker search-fields form-control-2" name="room" [(ngModel)]="Room">
                                         <option>Room</option>
-                                        <option>Single Room</option>
-                                        <option>Double Room</option>
-                                        <option>Presidential Room</option>
+                                        <option>Single Beds</option>
+                                        <option>Double Beds</option>
+                                        <option>Presidential Suite</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="adults">
+                                    <select class="selectpicker search-fields form-control-2" name="adults"[(ngModel)]="Adult">
                                         <option>Adult</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -86,7 +84,7 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="children">
+                                    <select class="selectpicker search-fields form-control-2" name="children" [(ngModel)]="Child">
                                         <option>Child</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -98,13 +96,13 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <button class="search-button btn-theme">Submit</button>
+                                    <button class="search-button btn-theme" (click)="onSubmit()">Submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
+    
         </div>
     </div>
 </div>
@@ -187,7 +185,7 @@
 <div class="w3-row-padding" id="About">
   <div class="w3-col l4 12">
     <h3>About</h3>
-    <h6>Our hotel is one of a kind. It is truely amazing.</h6>
+    <h6>Our hotel is one of a kind. It is truely amazing. Come spend the night and you will want to stay the whole week, we offer the best experience you could ever ask for.</h6>
   <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
   </div>
   <div class="w3-col l8 12">
@@ -216,12 +214,12 @@
   
   <div id="form-wrapper" style="max-width:500px;margin:auto;" class="container">
 
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
-    </form>
+    <!-- <form action="/action_page.php" target="_blank"> -->
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"[(ngModel)]="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"[(ngModel)]="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"[(ngModel)]="Message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit" (click)="onSubmit()">SEND MESSAGE</button></p>
+    <!-- </form> -->
   </div>
   </body>
 </div>
