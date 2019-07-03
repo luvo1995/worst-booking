@@ -8,37 +8,37 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
  
-  datein: DataCue;
-  dateout: DataView;
-  Room: string;
-  Adult: string;
-  Child: string;
-  
-  
-  constructor(private route: ActivatedRoute) { }
+  datein
+  dateout
+  room
+  adult
+  child
+  name
+  email
+  message
 
-     //Home(){this.router.navigateByUrl("")};
-     //About(){this.router.navigateByUrl("About")};
-     //Contact(){this.router.navigateByUrl("Contact")};
-     //Feedback(){this.router.navigateByUrl("Feedback")};
-     //booked(){this.router.navigateByUrl("booked")}
   
+  constructor(private router: Router) { }
+
+     Home(){this.router.navigateByUrl("")};
+     About(){this.router.navigateByUrl("About")};
+     Contact(){this.router.navigateByUrl("Contact")};
+     Feedback(){this.router.navigateByUrl("Feedback")};
+     booked(){this.router.navigateByUrl("booked")}
+     feedmessage(){this.router.navigateByUrl("feedmessage")}
   ngOnInit() {
   }
-  onSubmit() {
-    this.route.queryParams.subscribe(params => {
-      this.datein = params.datein;
-      this.dateout = params.dateout;
-      this.Room = params.Rooms;
-      this.Adult = params.Adult;
-      this.Child = params.Child;
-    
-      console.log(this.datein);
-      console.log(this.dateout);
-      console.log(this.Room);
-      console.log(this.Adult);
-      console.log(this.Child);
-    
-    });
+    onSubmit() {
+      {
+        this.router.navigate(['/booked'], {queryParams: {datein: this.datein, dateout: this.dateout, room: this.room, adult: this.adult, child: this.child}});
+   
+      }  
+      
+  }
+  onClick() {
+    {
+      this.router.navigate(['/feedmessage'], {queryParams: {name: this.name, email: this.email, message: this.message,}});
+ 
+    }  
   }
 }

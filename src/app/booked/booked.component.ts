@@ -9,14 +9,30 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BookedComponent implements OnInit {
 
-  constructor(private booked: Router) {} 
-  
-  submit() { 
+  din;
+  dout;
+  rum;
+  adlt;
+  chld;
 
-    this.booked.navigateByUrl("booked");
-  }
+  constructor(private route: ActivatedRoute) { } 
+  
+ 
   ngOnInit() {
-  
+    this.route.queryParams
+    .subscribe(params => {
+      console.log(params); 
+      this.din = params.datein
+      console.log(params);//this.din
+      this.dout = params.dateout
+      console.log(params);//this.dout
+      this.rum = params.room
+      console.log(params);//this.rum
+      this.adlt = params.adult
+      console.log(params);//this.adlt
+      this.chld= params.child
+      console.log(params)//this.chld
+    })
   }
-
-}
+  
+ }

@@ -13,7 +13,7 @@
 
 <!-- Navigation Bar -->
 
-<div class="w3-bar w3-white w3-large" class="fixed">
+<div class="w3-bar w3-white w3-large">
   <a class="active" href="" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i>West Hotel</a>
   <a href="" class="w3-bar-item w3-button w3-mobile">Home</a>
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
@@ -52,17 +52,17 @@
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <input type="text" class="btn-default datepicker" placeholder="Check In" [(ngModel)]="datein">
+                                    <input type="text" class="btn-default datepicker"  placeholder="Check In" name="datein"[(ngModel)]="datein">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <input type="text" class="btn-default datepicker" placeholder="Check Out" [(ngModel)]="dateout">
+                                    <input type="text" class="btn-default datepicker"  placeholder="Check Out" name="dateout" [(ngModel)]="dateout">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="room" [(ngModel)]="Room">
+                                    <select class="selectpicker search-fields form-control-2" name="room" [(ngModel)]="room">
                                         <option>Room</option>
                                         <option>Single Beds</option>
                                         <option>Double Beds</option>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="adults"[(ngModel)]="Adult">
+                                    <select class="selectpicker search-fields form-control-2" name="adults"[(ngModel)]="adult">
                                         <option>Adult</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="children" [(ngModel)]="Child">
+                                    <select class="selectpicker search-fields form-control-2" name="child" [(ngModel)]="child">
                                         <option>Child</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <button class="search-button btn-theme" (click)="onSubmit()">Submit</button>
+                                    <button type="button" class="search-button btn-theme" (click)="onSubmit()">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -215,10 +215,10 @@
   <div id="form-wrapper" style="max-width:500px;margin:auto;" class="container">
 
     <!-- <form action="/action_page.php" target="_blank"> -->
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"[(ngModel)]="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"[(ngModel)]="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"[(ngModel)]="Message"></p>
-      <p><button class="w3-button w3-black w3-padding-large" type="submit" (click)="onSubmit()">SEND MESSAGE</button></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"[(ngModel)]="name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"[(ngModel)]="email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"[(ngModel)]="message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit" (click)="onClick()">SEND MESSAGE</button></p>
     <!-- </form> -->
   </div>
   </body>
