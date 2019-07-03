@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   child
   name
   email
-  message
+  cellnumber
 
   
   constructor(private router: Router) { }
@@ -37,7 +37,7 @@ export class MenuComponent implements OnInit {
   }
   onClick() {
     {
-      this.router.navigate(['/feedmessage'], {queryParams: {name: this.name, email: this.email, message: this.message,}});
+      this.router.navigate(['/feedmessage'], {queryParams: {name: this.name, email: this.email, cellnumber: this.cellnumber,}});
  
     }  
   }

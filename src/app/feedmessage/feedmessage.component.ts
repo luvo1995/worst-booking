@@ -10,7 +10,7 @@ export class FeedmessageComponent implements OnInit {
 
   nme;
   mail;
-  mssge;
+  cellnumber;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -23,8 +23,8 @@ export class FeedmessageComponent implements OnInit {
       console.log(params);//this.nme
       this.mail = params.email
       console.log(params);//this.mail
-      this.mssge = params.message
-      console.log(params);//this.mssge
+      this.cellnumber = params.cellnumber
+      console.log(params);//this.cellnumber
     })
   }
 
